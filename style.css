@@ -1,0 +1,53 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    background: #d3cce3; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #d3cce3, #e9e4f0); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d3cce3, #e9e4f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.col-sm {
+    text-align: center;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    float: left;
+}
+
+.reflex__icon {
+    height: 15px;
+    width: 15px;
+}
+
+.reflex__item {
+    display: inline-block;
+}
+
+.reflex__item--disabled {
+    cursor: not-allowed;
+}
+
+.reflex__item--hidden {
+    display: none;
+}
+
+.reflex__item--warning {
+    font-weight: bold;
+    color: #428bca;
+}
+
+.reflex__tile--bad {
+    background: #A8A8A8;
+    cursor: pointer;
+}
+
+.reflex__tile--good {
+    background: #4BB543;
+    cursor: pointer;
+}
+
+.reflex__footer {
+    text-align: center;
+}

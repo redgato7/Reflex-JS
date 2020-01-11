@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reflex</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="bundle.js"></script>
+    <script src="index.js"></script>
+    <div class="container">
+        <div class="row mt-5">
+            <div id="statistics" class="col-sm reflex__item--hidden">  
+                Życia
+                <img class="reflex__icon" src="pics/like.svg">
+                <p id="numberOfLives">−</p>
+                Punkty
+                <img class="reflex__icon" src="pics/dollar.svg">
+                <p id="numberOfPoints">−</p>
+            </div>
+            <div class="col-sm">
+                <h1>Reflex</h1>
+                <p id="end">Zbieraj punkty klikając w zielony kwadrat.</p>
+            </div>
+            <div id="time_stats" class="col-sm reflex__item--hidden">
+                Czas
+                <img class="reflex__icon" src="pics/clock.svg">
+                <p id="counter">−</p>
+                <p id="warning" class="reflex__item--warning"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <table class="reflex__item" id="table">
+                    <tr id="row_0">
+                        <td class="reflex__item--hidden"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row" id="inputs">
+            <div class="col-sm">
+                
+            </div>
+            <div class="col-sm">
+                    <label for="numberOfRows">Ilość wierszy</label>
+                    <input onkeyup="this.value = inputMinMax(this.value, 2, 6)" class="form-control" value="2" name="rows" id="numberOfRows">
+                    <br>
+                    <label for="numberOfColumns">Ilość kolumn</label>
+                    <input onkeyup="this.value = inputMinMax(this.value, 2, 6)"  class="form-control" value="2" name="columns" id="numberOfColumns">
+            </div>
+            <div class="col-sm">
+
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-sm">
+                    
+            </div>
+            <div class="col-sm">
+                  
+                <button type="button" class="btn btn-primary" id="start" onclick="initializingGame()">Zacznij grę</button>
+                <button type="button" class="btn btn-secondary" onclick="reset()">Reset</button>
+                    
+            </div>
+            <div class="col-sm">
+    
+            </div>
+        </div>
+
+        <footer>
+            <div id="footer" class="reflex__footer mt-5">
+                <a href="https://redgato7.github.io/myPortfolio/">Dawid Zębacki</a>, 2019
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
